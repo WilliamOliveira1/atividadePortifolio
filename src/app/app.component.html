@@ -4,12 +4,18 @@
       <app-title></app-title>
     </div>
   </div>
-    <div class="row">
-      <div class="col-12">
-        <app-github></app-github>
-        <app-about></app-about>
-        <app-contact></app-contact>
-        <app-home></app-home>
+  <div class="row">
+    <div class="col-12">
+      <div id="botoes">
+        <button class="col-3 btn button" routerLink="home">Home</button>
+        <button class="col-3 btn button" routerLink="about">Sobre mim</button>
+        <button class="col-3 btn button" routerLink="github">Github</button>
+        <button class="col-3 btn button" routerLink="contato" (click)="contato()">Contato</button>
       </div>
+      <router-outlet></router-outlet>
     </div>
+  </div>
+  <div class="row">
+    <app-footer></app-footer>
+  </div>
 </div>
