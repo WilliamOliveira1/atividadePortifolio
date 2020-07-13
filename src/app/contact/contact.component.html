@@ -22,12 +22,12 @@
         </div>
         <h3 class="display-5 text-white">Email's cadastrados: {{ emails.length }}</h3>
         <div class="" *ngFor="let email of emails">
-          <p class="text-white" [emails]="email">{{ email.name }}@exemplo.com</p>
+          <p class="text-white">{{ email.name }}@exemplo.com</p>
         </div>
       </div>
     </nav>
   </div>
 </div>
-<footer class="col-12 fixed-bottom">
+<footer class="col-12">
   <app-footer></app-footer>
 </footer>
