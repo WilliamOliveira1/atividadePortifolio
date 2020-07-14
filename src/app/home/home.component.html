@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-12">
-    <h1 class="text-center m-5">Padawan de desenvolvimento front-end</h1>
+    <h1 class="text-center m-lg-5 m-1">Padawan de desenvolvimento front-end</h1>
   </div>
   <div class="col-12">
     <h2 class="text-center">Atividade do treinamento padawam</h2>
@@ -17,11 +17,11 @@
     </div>
   </div>
   <div class="col-12 float-right">
-    <div class="card col-12 ml-5 bg-dark">
+    <div class="card col-12 bg-dark">
     <input type="text" #cursoInput [(ngModel)]="cursoDigitado">
     <button class="btn btn-success" (click)="onAddCurso(cursoInput.value)">Adicione um curso</button>
     </div>
-    <div class="card col-12 ml-5 bg-dark">
+    <div class="card col-12 bg-dark">
     <ul>
       <div *ngIf="cursos.length == 0">
         <p class="float-left text-info">Ainda nao foi inserido nenhum curso</p>
