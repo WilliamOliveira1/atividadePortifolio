@@ -12,14 +12,14 @@ export class ContactComponent implements OnInit {
   nomeDigitado;
   @Output() emails;
   name;
-  @Output() newEmails = [ ...new Set( this.emails ) ];
+
 
 
 
   inserirEmail() {
     if (this.nomeDigitado){
       if(this.nomeDigitado != this.emails.index) {
-        this.emails.push({name: this.nomeDigitado})
+        this.emails.push({name: this.nomeDigitado});
       }
     }
   }

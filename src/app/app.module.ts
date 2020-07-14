@@ -9,6 +9,7 @@ import { GithubComponent } from './github/github.component';
 import { HomeComponent } from './home/home.component';
 import { TitleComponent } from './title/title.component';
 import { FooterComponent } from './footer/footer.component';
+import {LoggerService} from './logger.service';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

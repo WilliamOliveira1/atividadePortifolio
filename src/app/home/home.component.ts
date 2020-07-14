@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
+import {LoggerService} from '../logger.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  cursos: string [] = [];
+  cursoDigitado;
 
-  constructor() { }
+  constructor(private cursosService: LoggerService, ) {
+  }
 
   ngOnInit(): void {
+    this.cursos = this.cursosService.getCursos();
+    this.cursosService.emitirCursoCriado.subscribe(
+    );
+  }
+  onAddCurso(curso: string){
+    if(this.cursoDigitado){
+      this.cursosService.addCurso(curso);
+    }
   }
 
 }

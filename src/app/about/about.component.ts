@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoggerService} from '../logger.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  cursos: string[] = [];
+  cursosService: LoggerService;
+
+  constructor(_cursosService: LoggerService) {
+    this.cursosService = _cursosService;
+  }
 
   ngOnInit(): void {
+    this.cursos = this.cursosService.getCursos();
   }
 
 }

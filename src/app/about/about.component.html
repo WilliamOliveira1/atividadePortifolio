@@ -6,19 +6,21 @@
     <img class="card-img-top p-0" src="https://s.profissionaisti.com.br/wp-content/uploads/2019/01/0-destaque-linguagens-de-programacao-2019.jpg" alt="Card image" style="width: 100%">
     <div class="card-body">
       <h2 class="card-title text-center">Linguagens de programação</h2>
+      <div class="col-12" *ngIf="cursos.length == 0">
+        <p class="float-left text-info">Ainda nao foi inserido nenhum curso</p>
+      </div>
+      <div *ngIf="cursos.length > 0">
       <h6 class="card-title"> Tenho conhecimento das seguintes linguagens de programação: </h6>
       <ul class="card-text">
-        <li>Javascript</li>
-        <li>C</li>
-        <li>C#</li>
-        <li>Framework Angular</li>
+        <li *ngFor="let curso of cursos">{{curso}}</li>
       </ul>
-      <h6 class="card-title"> Tenho dominio em: </h6>
+      <h6 class="col-12 card-title"> Tenho dominio em: </h6>
       <ul class="card-text">
         <li>Html</li>
         <li>CSS</li>
         <li>Framework - Bootstrap</li>
       </ul>
+      </div>
     </div>
   </div>
   <div class="card col-5 p-0 m-2">
