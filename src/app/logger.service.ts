@@ -15,10 +15,12 @@ export class LoggerService {
     console.log('CursosService');
   }
 
+  // tslint:disable-next-line:typedef
   getCursos() {
     return this.cursos;
   }
 
+  // tslint:disable-next-line:typedef
   addCurso(curso: string){
     this.cursos.push(curso);
     this.emitirCursoCriado.emit(curso);

@@ -1,6 +1,7 @@
 import {Component, OnInit, Output} from '@angular/core';
 import {LoggerService} from '../logger.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,7 +11,8 @@ export class HomeComponent implements OnInit {
   cursos: string [] = [];
   cursoDigitado;
 
-  constructor(private cursosService: LoggerService, ) {
+
+  constructor(private cursosService: LoggerService ) {
   }
 
   ngOnInit(): void {
@@ -18,8 +20,9 @@ export class HomeComponent implements OnInit {
     this.cursosService.emitirCursoCriado.subscribe(
     );
   }
-  onAddCurso(curso: string){
-    if(this.cursoDigitado){
+  // tslint:disable-next-line:typedef
+  onAddCurso(curso: string) {
+    if (this.cursoDigitado){
       this.cursosService.addCurso(curso);
     }
   }

@@ -8,17 +8,14 @@ import {Component, OnInit, Input, Output} from '@angular/core';
 
 
 export class ContactComponent implements OnInit {
-
   nomeDigitado;
   @Output() emails;
   name;
 
-
-
-
-  inserirEmail() {
+  // tslint:disable-next-line:typedef
+  inserirEmail(){
     if (this.nomeDigitado){
-      if(this.nomeDigitado != this.emails.index) {
+      if (this.nomeDigitado !== this.emails.index) {
         this.emails.push({name: this.nomeDigitado});
       }
     }
@@ -27,9 +24,9 @@ export class ContactComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.emails= [];
-    for (let i=0; i<this.emails.length; i++) {
-      let curso =this.emails[i];
+    this.emails = [];
+    for (const value of this.emails) {
+      const curso = this.emails;
     }
   }
 

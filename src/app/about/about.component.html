@@ -13,6 +13,7 @@
       <h6 class="card-title"> Tenho conhecimento das seguintes linguagens de programação: </h6>
       <ul class="card-text">
         <li *ngFor="let curso of cursos">{{curso}}</li>
+        <p>data de inclusão do curso: {{dataAtual | date:'dd-MM-yyyy hh:mm '}}</p>
       </ul>
       <h6 class="col-12 card-title"> Tenho dominio em: </h6>
       <ul class="card-text">
@@ -31,6 +32,4 @@
       funcionarios flex para poder trabalhar em futuros projetos de desenvolvimento de sistemas.</p>
   </div>
 </div>
-<footer class="col-12">
-  <app-footer></app-footer>
-</footer>
+

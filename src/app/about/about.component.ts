@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LoggerService} from '../logger.service';
+import { LoggerService } from '../logger.service';
 
 @Component({
   selector: 'app-about',
@@ -8,15 +8,15 @@ import {LoggerService} from '../logger.service';
 })
 export class AboutComponent implements OnInit {
 
-  cursos: string[] = [];
+  cursos: string [] = [];
   cursosService: LoggerService;
+  dataAtual = new Date();
 
-  constructor(_cursosService: LoggerService) {
-    this.cursosService = _cursosService;
+  constructor(cursosService: LoggerService) {
+    this.cursosService = cursosService;
   }
 
   ngOnInit(): void {
     this.cursos = this.cursosService.getCursos();
   }
-
 }
