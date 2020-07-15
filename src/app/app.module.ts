@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { TitleComponent } from './title/title.component';
 import { FooterComponent } from './footer/footer.component';
 import {LoggerService} from './logger.service';
+import { TitleChildComponent } from './title/title-child/title-child.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {LoggerService} from './logger.service';
     GithubComponent,
     HomeComponent,
     TitleComponent,
-    FooterComponent
+    FooterComponent,
+    TitleChildComponent
   ],
   imports: [
     BrowserModule,
