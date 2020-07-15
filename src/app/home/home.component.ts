@@ -9,7 +9,7 @@ import {LoggerService} from '../logger.service';
 })
 export class HomeComponent implements OnInit {
   cursos: string [] = [];
-  cursoDigitado;
+  cursoDigitado: string;
 
 
   constructor(private cursosService: LoggerService ) {
@@ -17,11 +17,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.cursos = this.cursosService.getCursos();
-    this.cursosService.emitirCursoCriado.subscribe(
-    );
   }
-  // tslint:disable-next-line:typedef
-  onAddCurso(curso: string) {
+
+  onAddCurso(curso: string): void {
     if (this.cursoDigitado){
       this.cursosService.addCurso(curso);
     }

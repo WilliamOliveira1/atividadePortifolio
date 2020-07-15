@@ -7,11 +7,11 @@
 <div class="row mt-5">
   <div class="col-12">
     <nav class="navbar navbar-light bg-dark">
-      <form class="form-inline">
+      <form class="form-inline" (ngSubmit)="onSubmit()">
         <div class="input-group">
           <input [(ngModel)]="nomeDigitado" name="nome" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">@exemplo.com</span>
+            <span class="input-group-text">@exemplo.com</span>
           </div>
           <button class="btn my-2 my-sm-0 ml-2 bg-info"  type="button" (click)="inserirEmail()">Adicionar</button>
         </div>
