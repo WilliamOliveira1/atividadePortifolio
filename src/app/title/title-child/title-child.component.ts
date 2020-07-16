@@ -9,12 +9,10 @@ export class TitleChildComponent implements OnInit {
   @Input() receiveName;
   @Output() nameFather = new EventEmitter<string>();
 
+
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.receiveName);
-  }
-  nameEmit(): void {
-    this.nameFather.emit(this.receiveName);
+    this.nameFather.emit('William Oliveira');
   }
 }

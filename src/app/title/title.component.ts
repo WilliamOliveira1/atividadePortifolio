@@ -9,11 +9,14 @@ export class TitleComponent implements OnInit {
   name: string;
 
   constructor() {
-    this.name = 'William Oliveira';
   }
 
   ngOnInit(): void {
     console.log(this.name);
+  }
+
+  public setName(texto: string): void {
+    this.name = texto;
   }
 
 }
