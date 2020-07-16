@@ -6,11 +6,14 @@ import {Component, OnInit, Output} from '@angular/core';
   styleUrls: ['./title.component.css']
 })
 export class TitleComponent implements OnInit {
-  @Output() nameFather = 'William Oliveira';
+  name: string;
 
-  constructor() { }
+  constructor() {
+    this.name = 'William Oliveira';
+  }
 
   ngOnInit(): void {
+    console.log(this.name);
   }
 
 }

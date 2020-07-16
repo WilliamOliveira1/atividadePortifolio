@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-title-child',
@@ -6,11 +6,13 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./title-child.component.css']
 })
 export class TitleChildComponent implements OnInit {
-  @Input() nameChild: string;
+  @Input() receiveName;
+  @Output() nameFather = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.receiveName);
   }
 
 }

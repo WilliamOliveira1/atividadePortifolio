@@ -10,7 +10,7 @@ export class AboutComponent implements OnInit {
 
   cursos: string [] = [];
   cursosService: LoggerService;
-  dataAtual = new Date();
+  dataAtual;
 
   constructor(cursosService: LoggerService) {
     this.cursosService = cursosService;
@@ -18,5 +18,6 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.cursos = this.cursosService.getCursos();
+    this.dataAtual =  new Date();
   }
 }
